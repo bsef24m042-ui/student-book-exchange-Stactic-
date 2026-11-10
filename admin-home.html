@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Student Book Exchange</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="admin-page">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                📚 Student Book Exchange
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#adminNavbar"
+                    aria-controls="adminNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="adminNavbar">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="admin-home.html">
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#listings">
+                            Manage Listings
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reports">
+                            Reports
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+                        <a href="login.html" class="btn btn-outline-danger">
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Admin Welcome Section -->
+    <section class="admin-welcome py-5">
+        <div class="container">
+            <h1 class="fw-bold">Admin Dashboard 🛡️</h1>
+
+            <p class="text-secondary mb-0">
+                Manage the student community, monitor book listings,
+                and keep the platform organized.
+            </p>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="container py-4">
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon">👥</div>
+                    <h3>150</h3>
+                    <p>Registered Students</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon">📚</div>
+                    <h3>320</h3>
+                    <p>Total Book Listings</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon">⏳</div>
+                    <h3>12</h3>
+                    <p>Pending Listings</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon">🚩</div>
+                    <h3>05</h3>
+                    <p>Reported Listings</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Manage Book Listings -->
+    <section class="container py-4" id="listings">
+
+        <div class="admin-section-heading">
+            <h2 class="fw-bold">Manage Book Listings</h2>
+
+            <p class="text-secondary">
+                Review recently submitted books.
+            </p>
+        </div>
+
+        <div class="table-responsive bg-white admin-table-wrapper">
+
+            <table class="table table-hover align-middle mb-0">
+
+                <thead class="table-light">
+                    <tr>
+                        <th>Book Title</th>
+                        <th>Seller</th>
+                        <th>Price</th>
+                        <th>Condition</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Introduction to Algorithms</td>
+                        <td>Ali Ahmed</td>
+                        <td>Rs. 1,500</td>
+                        <td>Good</td>
+                        <td>
+                            <span class="badge bg-warning text-dark">
+                                Pending
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn btn-sm btn-success">
+                                Approve
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Database Management</td>
+                        <td>Sara Khan</td>
+                        <td>Rs. 900</td>
+                        <td>Very Good</td>
+                        <td>
+                            <span class="badge bg-warning text-dark">
+                                Pending
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn btn-sm btn-success">
+                                Approve
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Computer Networks</td>
+                        <td>Usman Ali</td>
+                        <td>Rs. 1,200</td>
+                        <td>Like New</td>
+                        <td>
+                            <span class="badge bg-success">
+                                Approved
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-danger">
+                                Remove
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Software Engineering</td>
+                        <td>Ayesha Noor</td>
+                        <td>Rs. 1,000</td>
+                        <td>Good</td>
+                        <td>
+                            <span class="badge bg-warning text-dark">
+                                Pending
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn btn-sm btn-success">
+                                Approve
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </section>
+
+    <!-- Reported Listings -->
+    <section class="container py-4" id="reports">
+
+        <div class="admin-section-heading">
+            <h2 class="fw-bold">Reported Listings</h2>
+
+            <p class="text-secondary">
+                Review content reported by students.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+                <div class="report-card">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="fw-bold">Physics Textbook</h5>
+
+                        <span class="badge bg-danger">
+                            Reported
+                        </span>
+                    </div>
+
+                    <p class="text-secondary mb-2">
+                        Reported by: Student User
+                    </p>
+
+                    <p class="mb-3">
+                        Reason: Incorrect book information.
+                    </p>
+
+                    <button class="btn btn-outline-danger btn-sm">
+                        Review Report
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="report-card">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="fw-bold">Mathematics Book</h5>
+
+                        <span class="badge bg-danger">
+                            Reported
+                        </span>
+                    </div>
+
+                    <p class="text-secondary mb-2">
+                        Reported by: Student User
+                    </p>
+
+                    <p class="mb-3">
+                        Reason: Incorrect price information.
+                    </p>
+
+                    <button class="btn btn-outline-danger btn-sm">
+                        Review Report
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Recent Registered Students -->
+    <section class="container py-4 pb-5">
+
+        <div class="admin-section-heading">
+            <h2 class="fw-bold">Recent Students</h2>
+
+            <p class="text-secondary">
+                Recently registered users on the platform.
+            </p>
+        </div>
+
+        <div class="table-responsive bg-white admin-table-wrapper">
+
+            <table class="table table-hover align-middle mb-0">
+
+                <thead class="table-light">
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Email Address</th>
+                        <th>University</th>
+                        <th>Account Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Ali Ahmed</td>
+                        <td>ali@example.com</td>
+                        <td>University A</td>
+                        <td>
+                            <span class="badge bg-success">
+                                Active
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Sara Khan</td>
+                        <td>sara@example.com</td>
+                        <td>University B</td>
+                        <td>
+                            <span class="badge bg-success">
+                                Active
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Usman Ali</td>
+                        <td>usman@example.com</td>
+                        <td>University C</td>
+                        <td>
+                            <span class="badge bg-secondary">
+                                Pending
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0 small">
+            © 2026 Student Book Exchange. All rights reserved.
+        </p>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
